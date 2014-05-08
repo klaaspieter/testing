@@ -1,0 +1,91 @@
+<html lang="en">
+<head>
+
+<style>
+  html, body { height: 100%; }
+
+  body {
+  	margin: 0;
+	  background-color: #ddd;
+    -webkit-user-select:none;
+  	/* Flexbox hawtness */
+    display: -webkit-box;
+  	-webkit-box-align: center;
+  	-webkit-box-pack: center;
+  }
+
+  header {
+  	background: rgba(0,0,0,0.15);
+    height:44px;
+    display:block;
+    width:100%;
+    position:fixed;
+    top:0;
+  }
+  
+  footer {
+  	background: rgba(0,0,0,0.15);
+    height:44px;
+    display:block;
+    width:100%;
+    position:fixed;
+    bottom:0;
+    left:0;
+  }
+      
+  img {
+    max-width:100%;
+        -webkit-user-select:auto;
+  }
+  
+  h4 {
+    margin-top:15px;
+    text-shadow: 0 2px 1px hsla(0,0%,100%,.3);
+    margin-left:20px;
+    max-width: 78%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family:sans-serif;
+    -webkit-user-select:text;
+    
+  }
+  
+  a {
+    display:block;
+    position:fixed;
+    bottom:14px;
+    right:20px;
+    height:24px;
+    width:24px;
+    font-size:24px;
+    text-decoration:none;
+    color:black;
+       content: "\2604";
+       position: absolute;
+    
+  }
+  
+  a.active {
+    content: "\2605";
+    position: absolute;
+  }
+  
+  a:hover:before {
+     content: "\2605";
+     position: absolute;
+  }
+  
+  
+</style></head>
+
+<body>
+<header></header>
+  <img src="{{OR_IMAGE_URL}}" />
+<footer>
+  <h4>{{OR_IMAGE_URL}}</h4>
+  <a id='star' href="gifs-app:toggle-fav?dl={{OR_IMAGE_URL}}***thumb={{OR_THUMB_URL}}">&#9734</a>
+</footer>
+
+</body>
+</html>
